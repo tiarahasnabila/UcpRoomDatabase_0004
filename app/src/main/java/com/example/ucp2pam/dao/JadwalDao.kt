@@ -22,6 +22,11 @@ interface JadwalDao {
     @Query("SELECT * FROM jadwal WHERE idJadwal = :idJadwal")
     fun getJadwal(idJadwal: String): Flow<Jadwal>
 
+    //deleteJadwal
+    @Delete
+    suspend fun deleteJadwal(jadwal: Jadwal)
 
-
+    //updateJadwal
+    @Update
+    suspend fun updateJadwal(jadwal: Jadwal)
 }
