@@ -18,13 +18,6 @@ interface JadwalDao {
     fun getAllJadwal(): Flow<List<Jadwal>>
 
     //Query untuk mendapat data berdasarkan
-    @Query("SELECT * FROM jadwal WHERE id = :id")
 
-    fun getMahasiswa(nim: String) : Flow<Mahasiswa>
 
-    @Delete
-    suspend fun deleteMahasiswa(mahasiswa: Mahasiswa)
-
-    @Update
-    suspend fun updateMahasiswa(mahasiswa: Mahasiswa)
 }
