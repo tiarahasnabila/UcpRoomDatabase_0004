@@ -21,6 +21,7 @@ data class Jadwal(
     val noHp: String,
     val tanggalKonsultasi: String,
     val status: String,
+
 )
 
 
