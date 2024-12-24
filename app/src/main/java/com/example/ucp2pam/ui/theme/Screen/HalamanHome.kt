@@ -105,6 +105,12 @@ fun HalamanHome(
                         .padding(16.dp)
                         .fillMaxWidth()
                 ) {
+                    Text(
+                        text = "Jumlah Dokter: ${dokterCountFlow.value}",
+                        style = MaterialTheme.typography.bodyMedium,
+                        modifier = Modifier.padding(bottom = 8.dp),
+                        color = Color.Black
+                    )
 
 
         }
