@@ -142,3 +142,10 @@ fun HalamanDokter(viewModel: MainViewModel, navController: NavController) {
                     Text("Malam", modifier = Modifier.align(Alignment.CenterVertically))
                 }
 
+                Button(
+                    onClick = { addDokter() },
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Text("Tambah Dokter")
+                }
+
