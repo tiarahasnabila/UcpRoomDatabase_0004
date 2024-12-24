@@ -56,3 +56,34 @@ fun HalamanDokter(viewModel: MainViewModel, navController: NavController) {
     }
     val spesialisOptions = listOf("penyakit dalam", "bedah", "mata", "gizi klinik")
 
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = {
+                    Box(
+                        modifier = Modifier
+                            .background(Color.White)
+                            .padding(horizontal = 70.dp, vertical = 60.dp)
+                    ){
+                        Text("Tambah Dokter",
+                            color = Color.Black
+                        )
+                    }
+                },
+
+                navigationIcon = {
+                    IconButton(onClick = { navController.navigate("home") }) {
+                        Icon(Icons.Filled.ArrowBack, contentDescription = "Back")
+                    }
+                }
+            )
+        },
+        content = { paddingValues ->
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(paddingValues)
+                    .background(Color.LightGray)
+                    .padding(16.dp),
+                verticalArrangement = Arrangement.spacedBy(16.dp)
+            )
