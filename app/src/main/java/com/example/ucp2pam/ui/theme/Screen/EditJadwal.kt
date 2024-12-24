@@ -52,3 +52,13 @@ fun EditJadwalScreen(
             .padding(16.dp)
             .background(Color.LightGray)
     )
+    {
+        Text("Edit Jadwal", style = MaterialTheme.typography.displayMedium)
+
+        // Dropdown for Nama Dokter
+        DropdownMenuComponent(
+            options = dokterList.map { it.namaDokter },
+            selectedOption = namaDokter,
+            onOptionSelected = { namaDokter = it }
+        )
+
