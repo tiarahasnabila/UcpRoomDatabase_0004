@@ -87,3 +87,58 @@ fun HalamanDokter(viewModel: MainViewModel, navController: NavController) {
                     .padding(16.dp),
                 verticalArrangement = Arrangement.spacedBy(16.dp)
             )
+            {
+                OutlinedTextField(
+                    value = nama,
+                    onValueChange = { nama = it },
+                    label = { Text("Nama Dokter") },
+                    modifier = Modifier.fillMaxWidth()
+                )
+
+                Text("Spesialis", style = MaterialTheme.typography.bodyLarge)
+                Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                    spesialisOptions.forEach { option ->
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            RadioButton(
+                                selected = spesialis == option,
+                                onClick = { spesialis = option }
+                            )
+                            Text(text = option, modifier = Modifier.padding(start = 8.dp))
+                        }
+                    }
+                }
+
+                Divider(thickness = 1.dp)
+
+                OutlinedTextField(
+                    value = klinik,
+                    onValueChange = { klinik = it },
+                    label = { Text("Klinik") },
+                    modifier = Modifier.fillMaxWidth()
+                )
+
+                OutlinedTextField(
+                    value = noHp,
+                    onValueChange = { noHp = it },
+                    label = { Text("No HP") },
+                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Phone),
+                    modifier = Modifier.fillMaxWidth()
+                )
+
+                Text("Jam Kerja", style = MaterialTheme.typography.bodyLarge)
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(16.dp)
+                ) {
+                    RadioButton(
+                        selected = jamKerja == "Pagi",
+                        onClick = { jamKerja = "Pagi" }
+                    )
+                    Text("Pagi", modifier = Modifier.align(Alignment.CenterVertically))
+                    RadioButton(
+                        selected = jamKerja == "Malam",
+                        onClick = { jamKerja = "Malam" }
+                    )
+                    Text("Malam", modifier = Modifier.align(Alignment.CenterVertically))
+                }
+
