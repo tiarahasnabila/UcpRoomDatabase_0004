@@ -93,3 +93,16 @@ fun EditJadwalScreen(
             textStyle = MaterialTheme.typography.bodyLarge.copy(color = Color.DarkGray)  // Dark text color
         )
 
+        Button(
+            onClick = {
+                if (namaDokter.isNotEmpty() && namaPasien.isNotEmpty() && noHp.isNotEmpty() && tanggalKonsultasi.isNotEmpty() && status.isNotEmpty()) {
+                    // Show confirmation dialog
+                    showDialog = true
+                } else {
+                    Toast.makeText(navController.context, "Please fill all fields", Toast.LENGTH_SHORT).show()
+                }
+            }
+        ) {
+            Text("Save Changes")
+        }
+
