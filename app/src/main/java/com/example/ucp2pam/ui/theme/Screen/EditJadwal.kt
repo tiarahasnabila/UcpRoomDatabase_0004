@@ -105,4 +105,38 @@ fun EditJadwalScreen(
         ) {
             Text("Save Changes")
         }
-
+        if (showDialog) {
+            AlertDialog(
+                onDismissRequest = { showDialog = false }, // Dismiss dialog on outside touch
+                title = { Text("Konfirmasi") },
+                text = { Text("Apakah Anda Yakin Ingin Mengedit Jadwal?") },
+                confirmButton = {
+                    Button(
+                        onClick = {
+                            // Confirmed, update the Jadwal
+                            viewModel.updateJadwal(
+                                Jadwal(
+                                    id = jadwal.id,
+                                    namaDokter = namaDokter,
+                                    namaPasien = namaPasien,
+                                    noHp = noHp,
+                                    tanggalKonsultasi = tanggalKonsultasi,
+                                    status = status
+                                )
+                            )
+                            navController.popBackStack() // Go back to the previous screen
+                            showDialog = false // Close the dialog
+                        }
+                    ) {
+                        Text("Yes")
+                    }
+                },
+                dismissButton = {
+                    Button(onClick = { showDialog = false }) {
+                        Text("No")
+                    }
+                }
+            )
+        }
+    }
+}
