@@ -47,3 +47,6 @@ fun HalamanJadwal(
     viewModel: MainViewModel,
     navController: NavController)
 {
+    val dokterList by viewModel.dokterList.observeAsState(emptyList())
+    val jadwalList by viewModel.jadwalList.observeAsState(emptyList())
+}
