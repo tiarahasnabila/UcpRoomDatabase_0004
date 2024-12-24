@@ -61,4 +61,35 @@ fun EditJadwalScreen(
             selectedOption = namaDokter,
             onOptionSelected = { namaDokter = it }
         )
+        OutlinedTextField(
+            value = namaPasien,
+            onValueChange = { namaPasien = it },
+            label = { Text("Nama Pasien") },
+            modifier = Modifier.fillMaxWidth(),
+            textStyle = MaterialTheme.typography.bodyLarge.copy(color = Color.DarkGray)  // Dark text color
+        )
+
+        OutlinedTextField(
+            value = noHp,
+            onValueChange = { noHp = it },
+            label = { Text("No HP") },
+            modifier = Modifier.fillMaxWidth(),
+            textStyle = MaterialTheme.typography.bodyLarge.copy(color = Color.DarkGray)  // Dark text color
+        )
+
+        OutlinedTextField(
+            value = tanggalKonsultasi,
+            onValueChange = { tanggalKonsultasi = it },
+            label = { Text("Tanggal Konsultasi") },
+            modifier = Modifier.fillMaxWidth(),
+            textStyle = MaterialTheme.typography.bodyLarge.copy(color = Color.DarkGray)  // Dark text color
+        )
+
+        OutlinedTextField(
+            value = status,
+            onValueChange = { status = it },
+            label = { Text("Status") },
+            modifier = Modifier.fillMaxWidth(),
+            textStyle = MaterialTheme.typography.bodyLarge.copy(color = Color.DarkGray)  // Dark text color
+        )
 
