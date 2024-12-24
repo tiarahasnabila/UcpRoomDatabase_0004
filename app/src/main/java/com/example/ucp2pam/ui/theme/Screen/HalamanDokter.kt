@@ -149,3 +149,21 @@ fun HalamanDokter(viewModel: MainViewModel, navController: NavController) {
                     Text("Tambah Dokter")
                 }
 
+
+                if (doctorAdded) {
+                    AlertDialog(
+                        onDismissRequest = { doctorAdded = false },
+                        title = { Text("Sukses") },
+                        text = { Text("Dokter berhasil ditambahkan.") },
+                        confirmButton = {
+                            TextButton(onClick = { doctorAdded = false }) {
+                                Text("OK")
+                            }
+                        }
+                    )
+                }
+            }
+        }
+    )
+}
+
