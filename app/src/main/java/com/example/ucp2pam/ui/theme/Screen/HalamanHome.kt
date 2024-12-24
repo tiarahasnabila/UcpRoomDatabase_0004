@@ -54,4 +54,8 @@ import kotlinx.coroutines.launch
 fun HalamanHome(
     navController: NavController) {
 
+    val doctorCount = remember { mutableStateOf(0) }
+    val patientCount = remember { mutableStateOf(0) }
+    }
+
 
