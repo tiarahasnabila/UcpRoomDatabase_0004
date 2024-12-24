@@ -102,6 +102,45 @@ fun HalamanJadwal(
             onOptionSelected = { namaDokter = it }
         )
 
+        OutlinedTextField(
+            value = namaPasien,
+            onValueChange = { namaPasien = it },
+            label = { Text("Nama Pasien") },
+            modifier = Modifier
+                .fillMaxWidth()
+        )
+
+        OutlinedTextField(
+            value = noHp,
+            onValueChange = { noHp = it },
+            label = { Text("No HP") },
+            modifier = Modifier.fillMaxWidth(),
+            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Phone)
+        )
+
+        OutlinedTextField(
+            value = tanggalKonsultasi,
+            onValueChange = { },
+            label = { Text("Tanggal Konsultasi") },
+            modifier = Modifier.fillMaxWidth(),
+            readOnly = true,
+            trailingIcon = {
+                IconButton(onClick = { datePickerDialog.show() }) {
+                    Icon(Icons.Filled.ArrowDropDown, contentDescription = "Select Date")
+                }
+            }
+        )
+
+        OutlinedTextField(
+            value = status,
+            onValueChange = { status = it },
+            label = { Text("Status") },
+            modifier = Modifier.fillMaxWidth()
+        )
+
+        Spacer(Modifier.height(8.dp))
+
+
 
 
     }
