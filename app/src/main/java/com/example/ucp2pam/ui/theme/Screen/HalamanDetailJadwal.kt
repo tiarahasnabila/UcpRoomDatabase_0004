@@ -121,6 +121,21 @@ fun HalamanDetailJadwal(
     }
 }
 
+@Composable
+fun JadwalCard(
+    jadwal: Jadwal,
+    navController: NavController,
+    viewModel: MainViewModel,
+    onDeleteClick: (Jadwal) -> Unit
+) {
+    Card(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(8.dp),
+        elevation = CardDefaults.cardElevation(4.dp),
+        shape = RoundedCornerShape(30.dp)
+    )
+
 
 
 
