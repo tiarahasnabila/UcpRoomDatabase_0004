@@ -77,5 +77,18 @@ fun HalamanDetailDokter(
 
         Spacer(Modifier.height(8.dp))
 
+        LazyColumn {
+            items(dokterList) { dokter ->
+                DokterCard(
+                    dokter = dokter,
+                    navController = navController,
+                    onDelete = {
+                        // Set the doctor to be deleted
+                        dokterToDelete = dokter
+                        showDialog = true
+                    }
+                )
+            }
+        }
 
     }
