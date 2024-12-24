@@ -49,4 +49,12 @@ fun HalamanJadwal(
 {
     val dokterList by viewModel.dokterList.observeAsState(emptyList())
     val jadwalList by viewModel.jadwalList.observeAsState(emptyList())
+
+    var namaDokter by remember { mutableStateOf("") }
+    var namaPasien by remember { mutableStateOf("") }
+    var noHp by remember { mutableStateOf("") }
+    var tanggalKonsultasi by remember { mutableStateOf("") }
+    var status by remember { mutableStateOf("") }
+
+    var showDialog by remember { mutableStateOf(false) }
 }
