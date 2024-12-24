@@ -75,5 +75,7 @@ fun HalamanDetailDokter(
             modifier = Modifier.fillMaxWidth()
         )
 
+        Spacer(Modifier.height(8.dp))
+
 
     }
