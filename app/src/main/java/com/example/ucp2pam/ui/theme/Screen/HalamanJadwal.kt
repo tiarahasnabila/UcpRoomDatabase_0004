@@ -70,4 +70,29 @@ fun HalamanJadwal(
         calendar.get(Calendar.DAY_OF_MONTH)
     )
 
-}
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp)
+            .background(Color.LightGray)
+    ) {
+        TopAppBar(
+            title = {
+                Box(
+                    modifier = Modifier
+                        .background(Color.White)
+                        .padding(horizontal = 50.dp, vertical = 50.dp)
+                ) {
+                    Text("Tambah Jadwal")
+                }
+            },
+            navigationIcon = {
+                IconButton(onClick = { navController.navigate("home") }) {
+                    Icon(Icons.Filled.ArrowBack, contentDescription = "Back")
+                }
+            },
+            modifier = Modifier.fillMaxWidth()
+        )
+
+
+    }
