@@ -151,16 +151,26 @@ fun JadwalCard(
                 "Nama Dokter: ${jadwal.namaDokter}",
                 style = MaterialTheme.typography.bodyMedium
             )
-            // Display No HP
             Text("No HP: ${jadwal.noHp}", style = MaterialTheme.typography.bodySmall)
-            // Display Tanggal Konsultasi
             Text(
                 "Tanggal Konsultasi: ${jadwal.tanggalKonsultasi}",
                 style = MaterialTheme.typography.bodySmall
             )
-            // Display Status
             Text("Status: ${jadwal.status}", style = MaterialTheme.typography.bodySmall)
-
+            Row {
+                Button(onClick = { onDeleteClick(jadwal) }) {
+                    Text("Hapus")
+                }
+                Spacer(modifier = Modifier.padding(start = 8.dp))
+                Button(onClick = {
+                    navController.navigate("editJadwal/${jadwal.id}") // Navigating to the Edit screen
+                }) {
+                    Text("Edit")
+                }
+            }
+        }
+    }
+}
 
 
 
