@@ -1,3 +1,5 @@
+link video : https://drive.google.com/file/d/1b2Vu_cyVIcY4PQM3RTjnAd15hGDsrk54/view?usp=sharing
+
 Halaman Home ![Halaman Home ](https://github.com/user-attachments/assets/62f1605b-f347-4991-984f-72d3f8f9d1d9)
 Validasi input dokter ![Validasidatadokter](https://github.com/user-attachments/assets/7de6479f-9311-4560-8ada-257fe8e31184)
 Input dokter ![Tambah Dokter](https://github.com/user-attachments/assets/21a6f161-df9c-4b7c-96cb-059d4bcbf366)
@@ -11,4 +13,4 @@ hapus data jadwal ![konfirmasihps](https://github.com/user-attachments/assets/35
 daftar jadwal terbaru ![daftarjadwalbaru](https://github.com/user-attachments/assets/4dcfc02a-9ac1-44a4-8e2d-d2731d3ca5a6)
 tampilan home setelah data jadwal dihapus![setelahhapus](https://github.com/user-attachments/assets/94e263c9-e762-466b-ae27-c51b8887f500)
 
-link video : https://drive.google.com/file/d/1b2Vu_cyVIcY4PQM3RTjnAd15hGDsrk54/view?usp=sharing
+
