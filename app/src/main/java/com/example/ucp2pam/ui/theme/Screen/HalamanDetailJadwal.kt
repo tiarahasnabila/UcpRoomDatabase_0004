@@ -135,6 +135,34 @@ fun JadwalCard(
         elevation = CardDefaults.cardElevation(4.dp),
         shape = RoundedCornerShape(30.dp)
     )
+    {
+        Column(
+            modifier = Modifier
+                .padding(16.dp)
+        ) {
+
+            Text(
+                text = "Nama Pasien: ${jadwal.namaPasien}",
+                style = MaterialTheme.typography.titleLarge,
+                modifier = Modifier.padding(bottom = 8.dp)
+            )
+
+            Text(
+                "Nama Dokter: ${jadwal.namaDokter}",
+                style = MaterialTheme.typography.bodyMedium
+            )
+            // Display No HP
+            Text("No HP: ${jadwal.noHp}", style = MaterialTheme.typography.bodySmall)
+            // Display Tanggal Konsultasi
+            Text(
+                "Tanggal Konsultasi: ${jadwal.tanggalKonsultasi}",
+                style = MaterialTheme.typography.bodySmall
+            )
+            // Display Status
+            Text("Status: ${jadwal.status}", style = MaterialTheme.typography.bodySmall)
+
+
+
 
 
 
