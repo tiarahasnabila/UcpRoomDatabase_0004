@@ -141,6 +141,22 @@ fun HalamanJadwal(
         Spacer(Modifier.height(8.dp))
 
 
-
-
+        Button(
+            onClick = {
+                if (namaDokter.isNotEmpty() && namaPasien.isNotEmpty() && noHp.isNotEmpty() && tanggalKonsultasi.isNotEmpty() && status.isNotEmpty()) {
+                    showDialog = true
+                } else {
+                    Toast.makeText(navController.context, "Please fill all fields", Toast.LENGTH_SHORT).show()
+                }
+            },
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text("Tambah Jadwal")
+        }
     }
+
+
+
+
+
+}
