@@ -91,4 +91,18 @@ fun HalamanDetailDokter(
             }
         }
 
+        Spacer(Modifier.height(150.dp))
+
+        IconButton(
+            onClick = { navController.navigate("home") },
+            modifier = Modifier.align(Alignment.CenterHorizontally)
+        ) {
+            Icon(
+                imageVector = Icons.Filled.Home,
+                contentDescription = "Home"
+            )
+        }
     }
+
+
+}
