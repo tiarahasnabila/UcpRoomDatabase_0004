@@ -103,6 +103,35 @@ fun HalamanDetailDokter(
             )
         }
     }
+    if (showDialog && dokterToDelete != null) {
+        AlertDialog(
+            onDismissRequest = { showDialog = false },
+            title = { Text("Konfirmasi Hapus") },
+            text = { Text("Apakah Anda yakin ingin menghapus dokter ${dokterToDelete!!.namaDokter}?") },
+            confirmButton = {
+                Button(
+                    onClick = {
+                        dokterToDelete?.let {
+                            // Call the delete method from the ViewModel
+                            viewModel.deleteDokter(it)
+                            showDialog = false
+                            navController.popBackStack() // Navigate back after deletion
+                        }
+                    }
+                ) {
+                    Text("Yes")
+                }
+            },
+            dismissButton = {
+                Button(onClick = { showDialog = false }) {
+                    Text("No")
+                }
+            }
+        )
+    }
+}
+
+
 
 
 }
