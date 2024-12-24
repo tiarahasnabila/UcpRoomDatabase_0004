@@ -9,4 +9,4 @@ edit jadwal ![editjadwal](https://github.com/user-attachments/assets/c3346f83-56
 data jadwal setelah di edit ![setelahedit](https://github.com/user-attachments/assets/12f5427a-22bc-4b22-bf39-b1d4566c4a65)
 hapus data jadwal ![konfirmasihps](https://github.com/user-attachments/assets/358091cc-7a26-48d2-9a1b-6b2f26e6a90e)
 daftar jadwal terbaru ![daftarjadwalbaru](https://github.com/user-attachments/assets/4dcfc02a-9ac1-44a4-8e2d-d2731d3ca5a6)
-tampilan home setelah dihapus![setelahhapus](https://github.com/user-attachments/assets/94e263c9-e762-466b-ae27-c51b8887f500)
+tampilan home setelah data jadwal dihapus![setelahhapus](https://github.com/user-attachments/assets/94e263c9-e762-466b-ae27-c51b8887f500)
