@@ -155,6 +155,45 @@ fun HalamanJadwal(
         }
     }
 
+    if (showDialog) {
+        AlertDialog(
+            onDismissRequest = { showDialog = false },
+            title = { Text("Konfirmasi") },
+            text = { Text("Apakah Anda yakin ingin menambahkan jadwal ini?") },
+            confirmButton = {
+                TextButton(
+                    onClick = {
+                        viewModel.addJadwal(
+                            Jadwal(
+                                namaDokter = namaDokter,
+                                namaPasien = namaPasien,
+                                noHp = noHp,
+                                tanggalKonsultasi = tanggalKonsultasi,
+                                status = status
+                            )
+                        )
+                        namaDokter = ""
+                        namaPasien = ""
+                        noHp = ""
+                        tanggalKonsultasi = ""
+                        status = ""
+                        showDialog = false
+                    }
+                ) {
+                    Text("Ya")
+                }
+            },
+            dismissButton = {
+                TextButton(
+                    onClick = { showDialog = false }
+                ) {
+                    Text("Tidak")
+                }
+            }
+        )
+    }
+}
+
 
 
 
