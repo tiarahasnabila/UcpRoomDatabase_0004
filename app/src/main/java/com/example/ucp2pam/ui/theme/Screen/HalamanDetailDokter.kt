@@ -44,3 +44,7 @@ fun HalamanDetailDokter(
     dokterList: List<Dokter>,
     viewModel: MainViewModel
 ) {
+    var showDialog by remember { mutableStateOf(false) }
+    var dokterToDelete by remember { mutableStateOf<Dokter?>(null) }
+
+}
