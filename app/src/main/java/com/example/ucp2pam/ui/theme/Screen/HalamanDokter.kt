@@ -31,3 +31,14 @@ fun HalamanDokter(viewModel: MainViewModel, navController: NavController) {
 
     var showDialog by remember { mutableStateOf(false) }
     var doctorAdded by remember { mutableStateOf(false) }
+
+    fun addDokter() {
+        if (nama.isNotEmpty() && spesialis.isNotEmpty() && klinik.isNotEmpty() && noHp.isNotEmpty() && jamKerja.isNotEmpty()) {
+            val dokter = Dokter(
+                namaDokter = nama,
+                spesialis = spesialis,
+                klinik = klinik,
+                noHp = noHp,
+                jamKerja = jamKerja
+            )
+            viewModel.addDokter(dokter)
