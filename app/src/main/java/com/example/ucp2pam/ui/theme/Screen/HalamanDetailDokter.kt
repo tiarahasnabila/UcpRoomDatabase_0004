@@ -47,4 +47,10 @@ fun HalamanDetailDokter(
     var showDialog by remember { mutableStateOf(false) }
     var dokterToDelete by remember { mutableStateOf<Dokter?>(null) }
 
-}
+    Column(modifier = Modifier
+        .fillMaxSize()
+        .background(Color.LightGray)
+        .padding(16.dp)) {
+
+
+    }
