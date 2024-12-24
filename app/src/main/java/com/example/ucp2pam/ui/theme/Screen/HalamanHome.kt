@@ -111,7 +111,14 @@ fun HalamanHome(
                         modifier = Modifier.padding(bottom = 8.dp),
                         color = Color.Black
                     )
-
+                    Text(
+                        text = "Jumlah Pasien: ${patientCountFlow.value}",
+                        style = MaterialTheme.typography.bodyMedium,
+                        modifier = Modifier.padding(bottom = 8.dp),
+                        color = Color.Black
+                    )
+                }
+            }
 
         }
 
