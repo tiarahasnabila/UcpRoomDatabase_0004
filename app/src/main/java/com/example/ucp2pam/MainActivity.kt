@@ -3,45 +3,26 @@ package com.example.ucp2pam
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.activity.viewModels
+import androidx.compose.runtime.livedata.observeAsState
+import com.example.ucp2pam.Navigation.AppNavigation
+import com.example.ucp2pam.ViewModel.MainViewModel
 import com.example.ucp2pam.ui.theme.UCP2PAMTheme
 
 class MainActivity : ComponentActivity() {
+
+    private val viewModel: MainViewModel by viewModels()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContent {
-            UCP2PAMTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+            UCP2PAMTheme (darkTheme = false) {
+
+                val dokterList = viewModel.dokterList.observeAsState(emptyList()).value
+                val jadwalList = viewModel.jadwalList.observeAsState(emptyList()).value
+                AppNavigation(dokterList = dokterList, jadwalList = jadwalList, viewModel = viewModel)
             }
         }
     }
 }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    UCP2PAMTheme {
-        Greeting("Android")
-    }
-}
