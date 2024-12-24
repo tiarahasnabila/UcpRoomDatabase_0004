@@ -58,6 +58,7 @@ fun HalamanHome(
     val patientCount = remember { mutableStateOf(0) }
 
     val context = LocalContext.current
+    val scope = rememberCoroutineScope()
 
     val database = JadwalDatabase.getDatabase(context)
     val dokterDao = database.dokterDao()
