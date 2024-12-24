@@ -119,8 +119,50 @@ fun HalamanHome(
                     )
                 }
             }
-
+            Spacer(modifier = Modifier.height(16.dp))
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(16.dp)
+            ) {
+                Button(
+                    onClick = { navController.navigate("home") },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(bottom = 8.dp)
+                ) {
+                    Text("Home")
+                }
+                Button(
+                    onClick = { navController.navigate("dokter") },
+                    modifier = Modifier.fillMaxWidth().padding(bottom = 8.dp)
+                ) {
+                    Text("Dokter")
+                }
+                Button(
+                    onClick = { navController.navigate("jadwal") },
+                    modifier = Modifier.fillMaxWidth().padding(bottom = 8.dp)
+                ) {
+                    Text("Jadwal")
+                }
+                Button(
+                    onClick = { navController.navigate("Detail Dokter") },
+                    modifier = Modifier.fillMaxWidth().padding(bottom = 8.dp)
+                ) {
+                    Text("Daftar Dokter")
+                }
+                Button(
+                    onClick = { navController.navigate("Detail Jadwal") },
+                    modifier = Modifier.fillMaxWidth().padding(bottom = 8.dp)
+                ) {
+                    Text("Daftar Jadwal")
+                }
+            }
         }
+    }
+}
+
+
 
 
 
