@@ -163,9 +163,14 @@ fun DokterCard(dokter: Dokter, navController: NavController, onDelete: () -> Uni
             Text("No HP: ${dokter.noHp}", style = MaterialTheme.typography.bodySmall)
             Text("Jam Kerja: ${dokter.jamKerja}", style = MaterialTheme.typography.bodySmall)
 
-
-
-
-
-
+            Button(
+                onClick = { onDelete() },
+                modifier = Modifier.padding(top = 16.dp)
+            ) {
+                Text("Hapus Dokter")
+            }
         }
+    }
+}
+
+
