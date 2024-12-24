@@ -50,3 +50,8 @@ fun HalamanDokter(viewModel: MainViewModel, navController: NavController) {
             noHp = ""
             jamKerja = ""
         } else {
+            Toast.makeText(navController.context, "Please fill all fields", Toast.LENGTH_SHORT)
+                .show()
+        }
+    }
+
