@@ -92,6 +92,19 @@ fun HalamanHome(
                 modifier = Modifier.padding(top = 4.dp),
                 color = Color.White,
             )
+            Card(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(16.dp),
+                shape = RoundedCornerShape(topStart = 24.dp, bottomEnd = 24.dp), // Sudut rounded
+                elevation = CardDefaults.cardElevation(4.dp)
+            ) {
+                Column(
+                    modifier = Modifier
+                        .background(Color.White)
+                        .padding(16.dp)
+                        .fillMaxWidth()
+                ) {
 
 
         }
