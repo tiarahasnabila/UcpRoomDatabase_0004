@@ -10,3 +10,5 @@ data jadwal setelah di edit ![setelahedit](https://github.com/user-attachments/a
 hapus data jadwal ![konfirmasihps](https://github.com/user-attachments/assets/358091cc-7a26-48d2-9a1b-6b2f26e6a90e)
 daftar jadwal terbaru ![daftarjadwalbaru](https://github.com/user-attachments/assets/4dcfc02a-9ac1-44a4-8e2d-d2731d3ca5a6)
 tampilan home setelah data jadwal dihapus![setelahhapus](https://github.com/user-attachments/assets/94e263c9-e762-466b-ae27-c51b8887f500)
+
+link video : https://drive.google.com/file/d/1b2Vu_cyVIcY4PQM3RTjnAd15hGDsrk54/view?usp=sharing
