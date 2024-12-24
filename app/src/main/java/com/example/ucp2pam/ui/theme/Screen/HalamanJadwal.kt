@@ -57,4 +57,17 @@ fun HalamanJadwal(
     var status by remember { mutableStateOf("") }
 
     var showDialog by remember { mutableStateOf(false) }
+
+    val calendar = Calendar.getInstance()
+    val datePickerDialog = DatePickerDialog(
+        navController.context,
+        { _, year, monthOfYear, dayOfMonth ->
+            val month = monthOfYear + 1  // Month starts from 0
+            tanggalKonsultasi = "$dayOfMonth/$month/$year"
+        },
+        calendar.get(Calendar.YEAR),
+        calendar.get(Calendar.MONTH),
+        calendar.get(Calendar.DAY_OF_MONTH)
+    )
+
 }
