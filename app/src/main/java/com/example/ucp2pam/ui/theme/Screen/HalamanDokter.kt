@@ -54,4 +54,5 @@ fun HalamanDokter(viewModel: MainViewModel, navController: NavController) {
                 .show()
         }
     }
+    val spesialisOptions = listOf("penyakit dalam", "bedah", "mata", "gizi klinik")
 
