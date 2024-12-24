@@ -131,6 +131,17 @@ fun HalamanDetailDokter(
     }
 }
 
+@Composable
+fun DokterCard(dokter: Dokter, navController: NavController, onDelete: () -> Unit) {
+    val spesialisColor = when (dokter.spesialis.lowercase()) {
+        "penyakit dalam" -> Color.Red
+        "bedah" -> Color.Blue
+        "mata" -> Color.Green
+        "gizi klinik" -> Color.Cyan
+        else -> Color.Gray
+    }
+
+
 
 
 
