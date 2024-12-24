@@ -45,3 +45,10 @@ fun EditJadwalScreen(
     var status by remember { mutableStateOf(jadwal.status) }
 
     var showDialog by remember { mutableStateOf(false) }
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp)
+            .background(Color.LightGray)
+    )
