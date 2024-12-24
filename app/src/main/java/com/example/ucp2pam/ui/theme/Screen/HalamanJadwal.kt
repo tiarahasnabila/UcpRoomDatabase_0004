@@ -94,5 +94,14 @@ fun HalamanJadwal(
             modifier = Modifier.fillMaxWidth()
         )
 
+        Spacer(Modifier.height(8.dp))
+
+        DropdownMenuComponent(
+            options = dokterList.map { it.namaDokter },
+            selectedOption = namaDokter,
+            onOptionSelected = { namaDokter = it }
+        )
+
+
 
     }
