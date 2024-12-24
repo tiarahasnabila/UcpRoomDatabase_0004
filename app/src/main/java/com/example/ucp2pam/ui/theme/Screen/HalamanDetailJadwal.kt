@@ -46,4 +46,28 @@ fun HalamanDetailJadwal(
     var showDialog by remember { mutableStateOf(false) }
     var jadwalToDelete by remember { mutableStateOf<Jadwal?>(null) }
 
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp)
+            .background(Color.LightGray)
+    ) {
+        TopAppBar(
+            title = {
+                Box(
+                    modifier = Modifier
+                        .background(Color.White)
+                        .padding(horizontal = 50.dp, vertical = 50.dp)
+                ) {
+                    Text("Daftar Jadwal")
+                }
+            },
+            navigationIcon = {
+                IconButton(onClick = { navController.popBackStack() }) {
+                    Icon(Icons.Filled.ArrowBack, contentDescription = "Back")
+                }
+            },
+            modifier = Modifier.fillMaxWidth()
+        )
+
 
