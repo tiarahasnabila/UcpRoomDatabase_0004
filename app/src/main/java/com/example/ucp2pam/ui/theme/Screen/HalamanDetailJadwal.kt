@@ -69,5 +69,19 @@ fun HalamanDetailJadwal(
             },
             modifier = Modifier.fillMaxWidth()
         )
+        LazyColumn {
+            items(jadwalList) { jadwal ->
+                // For each item, display a card
+                JadwalCard(
+                    jadwal = jadwal,
+                    navController = navController,
+                    viewModel = viewModel(),
+                    onDeleteClick = { selectedJadwal ->
+                        jadwalToDelete = selectedJadwal
+                        showDialog = true
+                    })
+            }
+        }
+
 
 
