@@ -84,9 +84,15 @@ fun HalamanHome(
                 contentDescription = "Logo",
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(150.dp) // Ukuran gambar
+                    .height(150.dp)
                     .padding(bottom = 16.dp)
             )
+            Text(
+                text = "Salam Sehat",
+                modifier = Modifier.padding(top = 4.dp),
+                color = Color.White,
+            )
+
 
         }
 
