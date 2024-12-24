@@ -64,6 +64,9 @@ fun HalamanHome(
     val dokterDao = database.dokterDao()
     val jadwalDao = database.jadwalDao()
 
+    val dokterCountFlow = dokterDao.getDoctorCount().collectAsState(initial = 0)
+    val patientCountFlow = jadwalDao.getPatientCount().collectAsState(initial = 0)
+
 }
 
 
