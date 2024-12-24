@@ -67,7 +67,28 @@ fun HalamanHome(
     val dokterCountFlow = dokterDao.getDoctorCount().collectAsState(initial = 0)
     val patientCountFlow = jadwalDao.getPatientCount().collectAsState(initial = 0)
 
-}
+    LaunchedEffect(Unit) {
+    }
+
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(Color.Blue)
+            .padding(16.dp),
+    ) {
+        Column(
+            modifier = Modifier.fillMaxSize()
+        ) {
+            Image(
+                painter = painterResource(id = R.drawable.logokesehatan),
+                contentDescription = "Logo",
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(150.dp) // Ukuran gambar
+                    .padding(bottom = 16.dp)
+            )
+
+        }
 
 
 
