@@ -52,5 +52,28 @@ fun HalamanDetailDokter(
         .background(Color.LightGray)
         .padding(16.dp)) {
 
+        TopAppBar(
+            title = {
+                Box(
+                    modifier = Modifier
+                        .background(Color.White)
+                        .padding(horizontal = 50.dp, vertical = 50.dp)
+                ) {
+                    Text("Daftar Dokter")
+                }
+            },
+            navigationIcon = {
+                IconButton(onClick = { navController.popBackStack() }) {
+                    Icon(Icons.Filled.ArrowBack, contentDescription = "Back")
+                }
+            },
+            actions = {
+                IconButton(onClick = { navController.navigate("home") }) {
+                    Icon(Icons.Filled.Home, contentDescription = "Home")
+                }
+            },
+            modifier = Modifier.fillMaxWidth()
+        )
+
 
     }
