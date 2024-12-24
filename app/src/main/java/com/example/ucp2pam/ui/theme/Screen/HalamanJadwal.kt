@@ -202,10 +202,35 @@ fun DropdownMenuComponent(
 ) {
     var expanded by remember { mutableStateOf(false) }
 
-
-
-
-
-
-
+    Box {
+        OutlinedTextField(
+            value = selectedOption,
+            onValueChange = { },
+            label = { Text("Pilih Dokter") },
+            readOnly = true,
+            modifier = Modifier.fillMaxWidth(),
+            trailingIcon = {
+                IconButton(onClick = { expanded = !expanded }) {
+                    Icon(Icons.Default.ArrowDropDown, contentDescription = null)
+                }
+            }
+        )
+        DropdownMenu(
+            expanded = expanded,
+            onDismissRequest = { expanded = false }
+        ) {
+            options.forEach { option ->
+                DropdownMenuItem(
+                    text = { Text(option) },
+                    onClick = {
+                        onOptionSelected(option)
+                        expanded = false
+                    }
+                )
+            }
+        }
+    }
 }
+
+
+
