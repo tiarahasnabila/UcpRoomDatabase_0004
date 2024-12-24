@@ -28,3 +28,25 @@ class MainViewModel (application: Application) : AndroidViewModel(application){
             dokterDao.deleteDokter(dokter)
         }
     }
+    fun addJadwal(jadwal: Jadwal) {
+        viewModelScope.launch {
+            jadwalDao.insertJadwal(jadwal)
+        }
+    }
+
+    fun updateJadwal(updatedJadwal: Jadwal) {
+        viewModelScope.launch {
+            // Update the Jadwal in the database
+            jadwalDao.updateJadwal(updatedJadwal)
+            // No need to update LiveData manually, it will automatically reflect changes
+        }
+    }
+
+    fun deleteJadwal(jadwal: Jadwal) {
+        viewModelScope.launch {
+            // Delete the Jadwal from the database
+            jadwalDao.deleteJadwal(jadwal)
+            // No need to update LiveData manually, it will automatically reflect changes
+        }
+    }
+}
