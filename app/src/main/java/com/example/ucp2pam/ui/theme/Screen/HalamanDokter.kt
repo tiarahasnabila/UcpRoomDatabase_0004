@@ -42,3 +42,11 @@ fun HalamanDokter(viewModel: MainViewModel, navController: NavController) {
                 jamKerja = jamKerja
             )
             viewModel.addDokter(dokter)
+
+            doctorAdded = true
+            nama = ""
+            spesialis = ""
+            klinik = ""
+            noHp = ""
+            jamKerja = ""
+        } else {
